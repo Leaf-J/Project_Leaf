@@ -1,0 +1,224 @@
+a:hover,a:focus {
+	text-decoration: none;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+	text-align: center;
+	background-color: transparent;
+}
+
+.jumbotron .btn {
+	padding: 14px 24px;
+	font-size: 21px;
+}
+
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
+.nav-justified {
+	background-color: #1fab51;
+	border: 1px solid #1FC251;
+	line-height: 0.5;
+}
+
+.nav-justified>li>a {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 0;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	background-color: #1FC251; /* Old browsers */
+	border-bottom: 1px solid #1fab51;
+}
+
+.nav-justified>.active>a,.nav-justified>.active>a:hover,.nav-justified>.active>a:focus
+	{
+	background-color: #1FAB51;
+	background-image: none;
+	-webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .15);
+	box-shadow: inset 0 3px 7px rgba(0, 0, 0, .15);
+}
+
+.nav-justified>li>a:hover,.nav-justified>li>a:focus {
+	background-color: rgba(31, 171, 81, 0.70);
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+	/* Remove the padding we set earlier */
+	.masthead,.marketing,.footer {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+.g_nav {
+	background: none repeat scroll 0 0 #1fc251;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.g_nav_main {
+	margin: 0 auto;
+	width: 992px;
+}
+
+.mainer-inner {
+	
+}
+
+.area-left {
+	float: left;
+}
+
+.area-right {
+	float: right;
+}
+
+.banner {
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	color: #666;
+	font-size: 14px;
+	height: 34px;
+	line-height: 27px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: left;
+	width: auto;
+}
+
+.area {
+	position: relative;
+}
+
+.g-nav-master {
+	float: left;
+	font-size: 14px;
+}
+
+.block {
+	background-color: #fff;
+	border: 1px solid #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	margin: 0 auto 16px;
+	overflow: visible;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+.banner .tab {
+	cursor: pointer;
+	float: left;
+	font-size: 13px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0 16px;
+	position: relative;
+	text-align: center;
+	width: auto;
+}
+
+.banner .tab.right,.banner .tab.more {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: -moz-use-text-color -moz-use-text-color
+		-moz-use-text-color #eee;
+	border-image: none;
+	border-style: none none none solid;
+	border-width: medium medium medium 1px;
+	float: right;
+}
+
+.banner .title-main {
+	font-family: 'Microsoft YaHei';
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.banner .title-sub {
+	font-family: 'Microsoft YaHei';
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.masthead .logo {
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.thumb img {
+	background-color: #eee;
+	border: 1px solid #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+	display: block;
+	font-size: 12px;
+	line-height: 16px;
+	margin: 0;
+	overflow: hidden;
+}
+/*
+ * Footer
+ */
+.footer {
+	padding: 40px 0;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #1fc251;
+	border-top: 1px solid #e5e5e5;
+}
+
+.footer p:last-child {
+	margin-bottom: 0;
+}
+
+#nav_mini {
+	height: 46px;
+	background: none repeat scroll 0 0 #1fc251;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+	margin-bottom:10px;
+}
+
+#nav_mini #nav_mini-inner {
+	height: 46px;
+	line-height: 46px;
+	margin: 0 auto;
+}
+
+#nav_mini-inner {
+	position: relative;
+	width: 980px;
+}
+
+#nav_mini-inner a {
+	font-size: 18px;
+	color: #ffffff;
+	text-decoration: none;
+	margin-right: 25px;
+}
+
+#nav_mini-inner a:hover,a:focus {
+	color: #71bdf8;
+}
+
+#nav_mini-inner .search-bar {
+	padding-right: 5px;
+	max-width: 200px;
+	padding-top: 5px;
+
+}
+
+body{
+	background-color: #fdfdfd;
+}

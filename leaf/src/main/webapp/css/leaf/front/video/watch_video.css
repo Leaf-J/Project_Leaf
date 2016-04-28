@@ -1,0 +1,56 @@
+body{
+	background-color: #f7f7f7;
+}
+
+.video-list {
+	width: 27%;
+	height: 500px;
+	overflow: auto;
+	overflow-x: hidden;
+	background-color: #000000;
+	margin-left:5px;
+}
+
+.video-list .time {
+	bottom: 17px;
+	color: #ffffff;
+	padding: 0 4px;
+	position: relative;
+	text-align: right;
+	width: 120px;
+	overflow: hidden;
+	font-size: 12px;
+}
+
+.video-list .scr-img {
+	width: 120px;
+	height: 67px;
+}
+
+.video-list .block-unit {
+	width: 300px;
+	border-bottom: 1px dashed #808080;
+	margin-bottom: 5px;
+}
+
+
+.video-list .desc {
+	font-size: 12px;
+	color: #aeaeae
+}
+
+/*重写boostrap样式*/
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+	border-top: 2px solid #4bb5c1;
+}
+
+div.navNdesc{
+	margin:2em 0em;
+	border: 1px solid #fff;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+div.navNdesc-mainer{
+	margin:1.5em;
+}

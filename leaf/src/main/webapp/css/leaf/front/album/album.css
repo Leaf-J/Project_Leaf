@@ -1,0 +1,50 @@
+#area-filter-list{
+    width: 95%;
+    padding: 1.5em 0 0 0;
+    margin-bottom: 0;	
+}
+
+#area-filter-list .item {
+    padding: 10px 0 0 50px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.label-list, #area-sort-list .count {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 50px;
+    font-size: 14px;
+    line-height: 26px;
+    height: 28px;
+    white-space: nowrap;
+    color: #888;
+}
+#area-filter-list .btn {
+    border: none;
+    box-shadow: none;
+    margin: 0 6px;
+    padding: 0 8px;
+    color: #555;
+}
+#area-filter-list .active {
+    color: #fff;
+    background-color: #4bb5c1;
+}
+
+.albumPage{
+	margin-top:1em;
+	width: 95%;
+}
+
+.albumBlock .info{
+	    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.albumBlock .thumbnail{
+	padding: 0;
+	border: 0;
+}

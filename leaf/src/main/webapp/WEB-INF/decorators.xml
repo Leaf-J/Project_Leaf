@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/decorators">
+	<excludes>
+	<!-- Sample 
+	<pattern>/front/advisor/advisorApply!index.do*</pattern> -->
+	</excludes>
+	
+	<!-- 从上到下匹配 -->
+	
+  	<decorator name="miniFrontLayout" page="front/miniNavBarLayout.jsp" >
+		<pattern>/front/video/*</pattern>
+	</decorator>	
+	
+  	<decorator name="defualtFrontLayout" page="front/defaultLayout.jsp" >
+		<pattern>/front/*</pattern>
+	</decorator>
+	
+</decorators>

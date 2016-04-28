@@ -1,0 +1,45 @@
+.regArea {
+	/*	background-image: url('/leaf/images/leaf/common/clover_register.jpg'); */
+	width: 100%;
+	text-align: center;
+	min-height: 500px;
+}
+
+.regArea .regBlock {
+	/*	background-color: rgba(166, 255, 135, 0.30); */
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	max-width: 400px;
+	/*	border: 1px solid #dadada; */
+	text-align: left
+}
+
+label {
+	font-weight: normal;
+}
+
+.register-form label,h3 {
+	color: #888;
+}
+
+.register-title {
+	
+}
+
+.btn-success {
+	width: 55%;
+}
+
+.register-form label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+	color: #FF0000;
+}
+
+.verifyCode{
+	padding-top:2px;
+	width:92px;
+	height: 25px;
+}
