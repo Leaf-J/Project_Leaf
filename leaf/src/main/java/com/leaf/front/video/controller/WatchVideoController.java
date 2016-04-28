@@ -51,7 +51,7 @@ public class WatchVideoController extends VideoFrontBaseController {
 		return mav;
 	}	
 
-	@RequestMapping(method = RequestMethod.GET, value = { "ab{albumId:\\d+}", "ab{albumId:\\d+}_{orderNumber:\\d+}" })
+	@RequestMapping(method = RequestMethod.GET, value = {"ab{albumId:\\d+}_{orderNumber:\\d+}" })
 	public ModelAndView watchVideo(HttpServletRequest request, ModelAndView mav,
 			@PathVariable Long albumId,
 			@PathVariable Integer orderNumber) {

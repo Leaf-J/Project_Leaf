@@ -10,8 +10,8 @@
 	</div> --%>
 	    <!-- 模态框（Modal） -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-         aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:200px;">
-        <div class="modal-dialog" style="width:400px;">
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width:400px;margin-top: 20%">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close"
@@ -69,8 +69,8 @@
 						<span>欢迎，${memberUser.nickName }</span>
 					</c:when>
 					<c:otherwise>
-		                <a href="javascript:void(0);" data-toggle="modal"
-		                   data-target="#myModal">登录</a> / <a href="${pageContext.request.contextPath}/front/register">注册</a>					
+		                <a href="javascript:void(0)" data-toggle="modal"
+		                   data-target="" onclick="$('#myModal').modal()">登录</a> / <a href="${pageContext.request.contextPath}/front/register">注册</a>					
 					</c:otherwise>
 				</c:choose>
             </div>
