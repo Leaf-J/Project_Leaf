@@ -6,13 +6,30 @@
 }
 
 .regArea .regBlock {
-	/*	background-color: rgba(166, 255, 135, 0.30); */
+	background-color: #F1F1F1;
 	margin: 0 auto;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-top: 5%;
+	margin-bottom: 5%;
 	max-width: 400px;
-	/*	border: 1px solid #dadada; */
-	text-align: left
+	border: 1px solid #FFF;
+	border-radius: 2em;
+	text-align: left;
+	padding: 2% 2%;
+	margin-right: 15%;
+		float:left;
+}
+
+.regArea .imgBlock{
+	margin: 0 auto;
+	margin-top: 15%;
+	margin-bottom: 5%;
+	margin-left: 15%;
+	max-width: 30%;
+		float:left;
+	margin-right:5%	
+}
+.imgBlock img{
+	width:100%;
 }
 
 label {
@@ -24,7 +41,7 @@ label {
 }
 
 .register-title {
-	
+	padding-right:8%
 }
 
 .btn-success {

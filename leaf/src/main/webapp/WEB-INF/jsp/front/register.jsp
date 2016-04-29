@@ -11,60 +11,62 @@
 <body>
 <div class="container regArea" style="margin-top:-10px;">
 
-    <div class="regBlock">
+<div class="imgBlock">
+	<img alt="" src="${pageContext.request.contextPath }/images/leaf/common/register_img_left.jpg">
+</div>
+    <div class="regBlock blockRight">
     <form class="form-horizontal register-form" role="form" method="post" action="${pageContext.request.contextPath }/front/register/doRegister">
         <div class="form-group" style="text-align: center;">
             <h3 class="register-title" >会员注册</h3>            
         </div>    
         <div class="form-group">
             <label for="email" class="col-sm-3 control-label">邮箱</label>
-            <div class="col-sm-6">
+            <div class="col-sm-5">
                 <input type="text" class="form-control required email" id="email" name="email"
                        placeholder="请输入邮箱">
             </div>
-            <div class="col-sm-3"></div>
+            <div class="col-sm-4"></div>
         </div>
         <div class="form-group">
             <label for="nickname" class="col-sm-3 control-label">昵称</label>
-            <div class="col-sm-6">
+            <div class="col-sm-5">
                 <input type="text" class="form-control required" id="nickname" name="nickname"
                        placeholder="请输入昵称">
             </div>
-            <div class="col-sm-3"></div>
+            <div class="col-sm-4"></div>
         </div>
         <div class="form-group">
             <label for="password" class="col-sm-3 control-label">密码</label>
-            <div class="col-sm-6">
+            <div class="col-sm-5">
             	<!-- id=password 或为保留字-->
                 <input type="password" class="form-control {required:true,minlength:6}" id="passwordl" name="password"
                        placeholder="请输入密码">
             </div>
-            <div class="col-sm-3"></div>
+            <div class="col-sm-4"></div>
         </div>
         <div class="form-group">
             <label for="confirmpwd" class="col-sm-3 control-label">确认密码</label>
-            <div class="col-sm-6">
+            <div class="col-sm-5">
                 <input type="password" class="form-control {required:true,minlength:6,equalTo:'#passwordl'}" id="confirmpwd" name="confirmpwd"
                        placeholder="确认密码">
             </div>
-            <div class="col-sm-3"></div>
+            <div class="col-sm-4"></div>
         </div>
         <div class="form-group">
             <label for="verifycode" class="col-sm-3 control-label">验证码</label>
-            <div class="col-sm-6">
+            <div class="col-sm-5">
                 <input type="text" class="form-control required" id="verifycode" name="verifycode"
                        placeholder="请输入验证码">
             </div>
-            <div class="col-sm-3" style="width:90px;"><img class="verifyCode" title="点击更换" onclick="javascript:refreshVerifyCode(this);" src="${pageContext.request.contextPath }/verifyCode.do"></div>
+            <div class="col-sm-4" ><img class="verifyCode" title="点击更换" onclick="javascript:refreshVerifyCode(this);" src="${pageContext.request.contextPath }/verifyCode.do"></div>
         </div>
         <div class="form-group">
-            <div class="col-sm-offset-3 col-sm-10">
+            <div class="col-sm-offset-3 col-sm-8">
                 <button type="submit" class="btn btn-success">注册</button>
             </div>
         </div>
     </form>
     </div>
-
 </div>
 
 <script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery/jquery.validate.min.js"></script>

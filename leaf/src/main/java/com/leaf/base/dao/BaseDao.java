@@ -3,11 +3,14 @@ package com.leaf.base.dao;
 import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
@@ -23,6 +26,8 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import com.leaf.base.domain.BaseEntity;
 import com.leaf.base.util.GenericUtil;
+import com.leaf.base.util.SecurityUtil;
+import com.leaf.common.domain.AdminUser;
 
 /**
  * 
@@ -47,6 +52,27 @@ public abstract class BaseDao<E extends BaseEntity> extends HibernateDaoSupport 
 		initSQL();
 	}
 
+
+	private void beforeSave(E entity) {
+		AdminUser user = SecurityUtil.getCurrentUser(AdminUser.class);
+		if (user != null) {
+			entity.setCreatedBy(user.getPid());
+			entity.setModifiedBy(user.getPid());
+		}
+		Date date = new Date();
+		entity.setCreatedOn(date);
+		entity.setModifiedOn(date);
+	}
+
+
+	private void beforeUpdate(E entity) {
+		AdminUser user = SecurityUtil.getCurrentUser(AdminUser.class);
+		if (user != null) {
+			entity.setModifiedBy(user.getPid());
+		}
+		entity.setModifiedOn(new Date());
+	}
+	
 	protected void initHQL() {
 	}
 
@@ -63,10 +89,20 @@ public abstract class BaseDao<E extends BaseEntity> extends HibernateDaoSupport 
 	}
 
 	public void save(E entity) {
+		if(entity.getCreatedBy()==null){
+			this.beforeSave(entity);
+		}else{
+			this.beforeUpdate(entity);
+		}
 		this.getHibernateTemplate().save(entity);
 	}
 
 	public void update(E entity) {
+		if(entity.getCreatedBy()==null){
+			this.beforeSave(entity);
+		}else{
+			this.beforeUpdate(entity);
+		}
 		this.getHibernateTemplate().update(entity);
 	}
 
@@ -86,6 +122,11 @@ public abstract class BaseDao<E extends BaseEntity> extends HibernateDaoSupport 
 	}
 
 	public void saveOrUpdate(E entity) {
+		if(entity.getCreatedBy()==null){
+			this.beforeSave(entity);
+		}else{
+			this.beforeUpdate(entity);
+		}
 		this.getHibernateTemplate().saveOrUpdate(entity);
 	}
 

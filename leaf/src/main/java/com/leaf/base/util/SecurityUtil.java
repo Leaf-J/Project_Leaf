@@ -17,6 +17,15 @@ public class SecurityUtil {
 			    .getAuthentication();
 	}
 	
+	@SuppressWarnings("unchecked")
+	public static <T> T getCurrentUser(Class<T> t){
+		Authentication authen =  getUserAuthentication();
+		if(authen!=null){
+			return (T)authen.getPrincipal();
+		}
+		return null;
+	}
+	
 	/**
 	 * MD5 32位 加密
 	 * @param sourceStr
