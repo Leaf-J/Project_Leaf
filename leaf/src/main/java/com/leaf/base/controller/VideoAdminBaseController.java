@@ -24,6 +24,7 @@ import com.leaf.base.util.GenericUtil;
 import com.leaf.base.util.SecurityUtil;
 import com.leaf.common.domain.AdminResource;
 import com.leaf.common.domain.AdminUser;
+import com.leaf.common.domain.MemberUser.MemberUserState;
 import com.leaf.common.service.AdminResourceService;
 import com.leaf.common.service.AdminRoleResourceService;
 import com.leaf.common.vo.AdminResponseVO;

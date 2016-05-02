@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.leaf.base.controller.VideoFrontBaseController;
+import com.leaf.base.util.SecurityUtil;
 import com.leaf.common.domain.MemberUser;
 import com.leaf.common.domain.RecommendedVideo;
 import com.leaf.common.service.MemberUserService;
@@ -37,7 +38,8 @@ public class LoginController extends VideoFrontBaseController{
 	public String doLogin(HttpServletRequest request,HttpServletResponse response){
 		String email = (String)request.getParameter("email");
 		String password = (String)request.getParameter("password");
-		MemberUser user = memberUserService.findByEmailAndPassword(email, password);
+		String encryptPwd = SecurityUtil.MD5(password+"{"+email+"}");
+		MemberUser user = memberUserService.findByEmailAndPassword(email, encryptPwd);
 		request.getSession().setAttribute("memberUser", user);
 		
 		List<RecommendedVideo> remdList = recommendedVideoService.getRecommendedListByMemberUser(user);

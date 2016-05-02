@@ -4,6 +4,10 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.FatalBeanException;
 import org.springframework.util.Assert;
@@ -58,4 +62,5 @@ public abstract class BeanUtils extends org.springframework.beans.BeanUtils {
 			}
 		}
 	}
+	
 }

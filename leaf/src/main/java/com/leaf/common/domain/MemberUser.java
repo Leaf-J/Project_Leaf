@@ -18,13 +18,34 @@ public class MemberUser extends BaseEntity {
 
 	@Column
 	private String nickName;
-	@Column(unique=true)
+	@Column(unique = true)
 	private String email;
 	@Column
 	private String picUrl;
 	@Column
 	private String password;
 
+	@Column
+	private boolean isEmailVerified = Boolean.FALSE;
+
+	@Column
+	private Integer userState = MemberUserState.CREATED.getValue();
+
+	public enum MemberUserState {
+		CREATED(0), // 创建，还没邮箱校验
+		ENABLED(1), // 有效账号
+		DISABLED(2);// 冻结账号
+		private final Integer stateValue;
+
+		MemberUserState(Integer stateValue) {
+			this.stateValue = stateValue;
+		}
+
+		public Integer getValue() {
+			return this.stateValue;
+		}
+	}
+	
 	public String getNickName() {
 		return nickName;
 	}
@@ -55,6 +76,22 @@ public class MemberUser extends BaseEntity {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public boolean isEmailVerified() {
+		return isEmailVerified;
+	}
+
+	public void setEmailVerified(boolean isEmailVerified) {
+		this.isEmailVerified = isEmailVerified;
+	}
+
+	public Integer getUserState() {
+		return userState;
+	}
+
+	public void setUserState(Integer userState) {
+		this.userState = userState;
 	}
 
 }

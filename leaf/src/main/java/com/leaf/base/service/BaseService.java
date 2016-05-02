@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.List;
 
 import org.hibernate.criterion.DetachedCriteria;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.leaf.base.dao.BaseDao;
 import com.leaf.base.domain.BaseEntity;
