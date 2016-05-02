@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.apache.commons.lang.time.DateUtils;
 import org.hibernate.annotations.GenericGenerator;
@@ -27,12 +29,14 @@ public abstract class BaseEntity implements Serializable {
 	private long pid;
 
 	@Column
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdOn;
 
 	@Column
 	private Long createdBy;
 
 	@Column
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date modifiedOn;
 
 	@Column

@@ -2,6 +2,8 @@ package com.leaf.email.domain;
 
 import javax.validation.constraints.NotNull;
 
+import org.apache.commons.lang.StringUtils;
+
 import com.leaf.base.util.ValidateUtil;
 import com.leaf.email.domain.EmailEvent.EmailEventName;
 
@@ -25,6 +27,9 @@ public class EmailEventRequest extends EmailRequest{
 			EmailEventName emailEventName){
 		EmailEventRequest request = new EmailEventRequest();
 		request.setFrom(from);
+		if(StringUtils.isNotBlank(to) && !to.endsWith(";")){
+			to+=";";
+		}
 		request.setTo(to);
 		request.setEmailEventName(emailEventName);
 		ValidateUtil.validate(request);
@@ -33,11 +38,6 @@ public class EmailEventRequest extends EmailRequest{
 	
 	public static EmailEventRequest createRequest(String to,
 			EmailEventName emailEventName){
-		EmailEventRequest request = new EmailEventRequest();
-		request.setFrom(getSystemFromEmail());
-		request.setTo(to);
-		request.setEmailEventName(emailEventName);
-		ValidateUtil.validate(request);
-		return request;
+		return createRequest(getSystemFromEmail(),to,emailEventName);
 	}
 }
